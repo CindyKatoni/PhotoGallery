@@ -8,3 +8,10 @@ def photo_index(request):
         'photos':photos
     }
     return render(request, 'photo_index.html', context)
+
+def photo_details(request, pk):
+    photos = Photos.objects.get(pk=pk)
+    context = {
+        'photos':photos
+    }  
+    return render(request, 'photo_details.html', context)
