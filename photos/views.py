@@ -5,6 +5,6 @@ from photos.models import Photos
 def photo_index(request):
     photos = Photos.objects.all()
     context = {
-        'projects':projects
+        'photos':photos
     }
     return render(request, 'photo_index.html', context)
